@@ -1,4 +1,4 @@
-name: One_Subscriber
+name: Static_Subscriber
 topology:
   kinds:
     nokia_srsim:
