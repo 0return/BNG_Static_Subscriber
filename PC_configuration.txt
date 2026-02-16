@@ -9,7 +9,7 @@ ip link set eth1.10 up
 
 # Assing IP static
 
-ip addr add 172.9.10.1/24 dev eth1.10
+ip addr add 10.1.1.1 dev eth1.10
 
 # Verify 
 
@@ -17,8 +17,12 @@ ip addr show eth1.10
 
 # Gateway configuration
 
-ip route add default via 172.9.10.254
+ip route add default via 10.1.1.10
 
 # if your default route is different, please delete and add 172.9.10.254
 
 ip route del default
+
+# Activate the ARP procces on the PC
+
+arping -I eth1.10 10.1.1.10
