@@ -1,1 +1,18 @@
-name: One_Subscribertopology:  kinds:    nokia_srsim:      license: /home/jesusdavid/Licenses/SRSIM_25.txt      image: localhost/nokia/srsim:25.7.R2    linux:      image: ghcr.io/hellt/network-multitool  nodes:    BNG:      kind: nokia_srsim      type: sr-1    PC:      kind: linux  links:    # # DATA LINKS    - endpoints: ["BNG:1/1/c1/1", "PC:eth1"]
+name: One_Subscriber
+topology:
+  kinds:
+    nokia_srsim:
+      license: /home/jesusdavid/Licenses/SRSIM_25.txt
+      image: localhost/nokia/srsim:25.7.R2
+    linux:
+      image: ghcr.io/hellt/network-multitool
+  nodes:
+    BNG:
+      kind: nokia_srsim
+      type: sr-1
+    PC:
+      kind: linux
+
+  links:
+    # # DATA LINKS
+    - endpoints: ["BNG:1/1/c1/1", "PC:eth1"]
