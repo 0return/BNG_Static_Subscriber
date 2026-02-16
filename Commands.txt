@@ -1,0 +1,1 @@
+# Verify subsciber with the following commandsshow service id 18 baseshow service id 18 subscriber-hosts show service id 18 arp
